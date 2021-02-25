@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://unpkg.com/vue@next"></script>
+    <title>Opgave 3 JavaScript</title>
+    <h1 class="jumbotron">Opgave 3 JavaScript</h1>
+</head>
+<body>
+    <div id="app">
+        <input id="InputField" v-model="name" placeholder="Insert a name">
+        <button id="button" v-on:click="addTo(name)" class="btn btn-primary">Save</button>
+        <ol>
+        <li v-for="name in names">{{name}} </li>
+        </ol>
+
+        <table class="table" style="width: 300px; border-style: solid;">
+            <thead class="table-striped">
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Text</th>
+                    
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row">1</th>
+                    <th>{{names[0]}}</th>
+                </tr>
+                <tr>
+                    <th scope="row">2</th>
+                    <th>{{names[1]}}</th>
+                </tr>
+                <tr>
+                    <th scope="row">3</th>
+                    <th>{{names[2]}}</th>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+  <script src="JS/index.js"></script>  
+</body>
+</html>
